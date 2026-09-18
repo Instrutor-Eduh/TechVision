@@ -1,0 +1,42 @@
+header {
+    width: 100%;
+    padding-top: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--header-cor);
+    font-size: 1.1rem;
+}
+
+ul li a::after {
+    content: "";
+    display: block;
+    background-color: var(--header-cor);
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    margin-top: 4px;
+    transition: .3s;
+}
+
+ul li a:hover::after {
+    width: 80%;
+}
